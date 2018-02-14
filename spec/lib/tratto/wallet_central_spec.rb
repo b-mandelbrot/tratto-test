@@ -1,4 +1,3 @@
-require 'pry'
 RSpec.describe WalletCentral do
 
   subject { WalletCentral.new }
