@@ -2,3 +2,4 @@ source "https://rubygems.org"
 
 ruby "2.4.2"
 gem "rspec", "~> 3.1.0"
+gem 'pry'
