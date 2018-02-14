@@ -4,7 +4,7 @@ RSpec.describe QuoteDataAccess do
     let(:quotes) { subject.all }
 
     it { expect(quotes).to be_an Array }
-    it { expect(quotes.size).to be 3 }
+    it { expect(quotes.size).to eq 3 }
     it { expect(quotes).to all(be_an Quote) }
   end
 
@@ -36,7 +36,8 @@ RSpec.describe QuoteDataAccess do
     context 'there is not a quote' do
       let(:quote) { subject.find_by!(currency: 'BTC') }
 
-      it { expect { quote }.to raise_error(Exception, 'Quote with params={:currency=>"BTC"} not found!') }
+      it { expect { quote }.to raise_error(Exception,
+        'Quote with params={:currency=>"BTC"} not found!') }
     end
   end
 
@@ -45,7 +46,7 @@ RSpec.describe QuoteDataAccess do
       let(:quotes) { subject.where(currency: 'USD') }
 
       it { expect(quotes).to be_an Array }
-      it { expect(quotes.size).to be 1 }
+      it { expect(quotes.size).to eq 1 }
       it { expect(quotes).to all(be_an Quote) }
     end
 
