@@ -28,7 +28,6 @@ class Wallet
   end
 
   def check_funds(value)
-    raise InsufficientFundsError.new "Insufficient funds for client #{client} \
-      currecy #{currency}!" if value > amount
+    raise InsufficientFundsError.new "Insufficient funds for client #{client} currecy #{currency}!" if value > amount
   end
 end
