@@ -79,7 +79,7 @@ RSpec.describe WalletDataAccess do
       let(:wallets) { subject.where(client: 'jon') }
 
       it { expect(wallets).to be_an Array }
-      it { expect(wallets.size).to be 2 }
+      it { expect(wallets.size).to eq 2 }
       it { expect(wallets).to all(be_an Wallet) }
     end
 
@@ -94,7 +94,7 @@ RSpec.describe WalletDataAccess do
       let(:wallets) { subject.where(client: 'jon', currency: 'USD') }
 
       it { expect(wallets).to be_an Array }
-      it { expect(wallets.size).to be 1 }
+      it { expect(wallets.size).to eq 1 }
       it { expect(wallets).to all(be_an Wallet) }
     end
 
