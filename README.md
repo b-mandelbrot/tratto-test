@@ -1,3 +1,25 @@
+# About the solution (How to run)
+
+  ```bash
+  $ git@github.com:b-mandelbrot/tratto-test.git
+
+  $ cd tratto-test
+
+  $ irb
+  :001 > require './lib/tratto'
+  :002 > wc = WalletCentral.new
+  :003 > wc.output('jon')
+   => "{\"name\":\"jon\",\"wallets\":{\"EUR\":868.65,\"USD\":463.39}}"
+  :004 > wc.output('sansa')
+   => "{\"name\":\"sansa\",\"wallets\":{\"EUR\":1065.45,\"BRL\":586.28}}"
+  :005 > wc.transfer('jon', 'sansa', 'EUR', 100)
+   => true
+  :006 > wc.output('jon')
+  => "{\"name\":\"jon\",\"wallets\":{\"EUR\":768.65,\"USD\":463.39}}"
+  :007 > wc.output('sansa')
+  => "{\"name\":\"sansa\",\"wallets\":{\"EUR\":1165.45,\"BRL\":586.28}}"
+  ```
+
 # Tratto Programming Exercise
 
 In the lib/resources directory, you'll find a csv data file:
