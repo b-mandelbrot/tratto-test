@@ -1,9 +1,13 @@
-# About the solution (How to run)
+# About the solution
+
+#### How to run the code
 
   ```bash
   $ git@github.com:b-mandelbrot/tratto-test.git
 
   $ cd tratto-test
+
+  $ bundle install
 
   $ irb
   :001 > require './lib/tratto'
@@ -18,6 +22,12 @@
   => "{\"name\":\"jon\",\"wallets\":{\"EUR\":768.65,\"USD\":463.39}}"
   :007 > wc.output('sansa')
   => "{\"name\":\"sansa\",\"wallets\":{\"EUR\":1165.45,\"BRL\":586.28}}"
+  ```
+
+#### How to run the tests
+
+  ```bash
+  $ rspec spec
   ```
 
 # Tratto Programming Exercise
