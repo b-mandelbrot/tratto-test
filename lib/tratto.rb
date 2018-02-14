@@ -1,6 +1,8 @@
 # All the libraries required by Tratto API
 require 'csv'
 
+require_relative 'tratto/exchange'
+
 require_relative 'tratto/data_access/data_access'
 require_relative 'tratto/data_access/quote_data_access'
 require_relative 'tratto/data_access/wallet_data_access'
